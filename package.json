@@ -1,0 +1,19 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "backend for the odiigo app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/achintyashende/odiigo-backend.git"
+  },
+  "author": "Achintya",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/achintyashende/odiigo-backend/issues"
+  },
+  "homepage": "https://github.com/achintyashende/odiigo-backend#readme"
+}
