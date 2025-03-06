@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const VehicleSchema = new mongoose.Schema(
     {
         request_id: { type: String, default: "" },
-        license_plate: { type: String, default: "" },
+        license_plate: {type: String, required: true, default: "" },       // registration_number
         owner_name: { type: String, default: "" },
         father_name: { type: String, default: "" },
         is_financed: { type: String, default: "" },
@@ -13,16 +13,16 @@ const VehicleSchema = new mongoose.Schema(
         insurance_company: { type: String, default: "" },
         insurance_policy: { type: String, default: "" },
         insurance_expiry: { type: String, default: "" },
-        class: { type: String, default: "" },
+        class: { type: String, default: "" },               // type of vehicle LMV, 2WN, HMV
         registration_date: { type: String, default: "" },
         vehicle_age: { type: String, default: "" },
         pucc_upto: { type: String, default: "" },
         pucc_number: { type: String, default: "" },
         chassis_number: { type: String, default: "" },
         engine_number: { type: String, default: "" },
-        fuel_type: { type: String, default: "" },
-        brand_name: { type: String, default: "" },
-        brand_model: { type: String, default: "" },
+        fuel_type: { type: String, required: true, default: "" },           // required fuel type
+        brand_name: { type: String, required: true, default: "" },          // required brand name (make)
+        brand_model: { type: String, required: true, default: "" },         // required brand model (model)
         cubic_capacity: { type: String, default: "" },
         gross_weight: { type: String, default: "" },
         cylinders: { type: String, default: "" },
@@ -42,11 +42,8 @@ const VehicleSchema = new mongoose.Schema(
         national_permit_upto: { type: String, default: "" },
         national_permit_issued_by: { type: String, default: "" },
         rc_status: { type: String, default: "" },
-        // User-provided fields if API data is missing
-        transmission: { type: String, default: "" },
-        registration_number: { type: String, default: "" },
-        make: { type: String, default: "" }, // Maps to brand_name
-        model: { type: String, default: "" } // Maps to brand_model
+        // User-provided fields
+        transmission_type: { type: String, required: true, default: "" },   // Automatic / Manual
     },
     {
         timestamps: true
