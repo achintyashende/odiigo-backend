@@ -12,6 +12,7 @@ app.use("/api/services", require('./services/categories/services/routes/serviceR
 app.use("/api/categories", require('./services/categories/routes/categoryRoutes'))
 app.use("/api/servicePricing", require('./services/service-prices/routes/servicePricingRoutes'))
 app.use("/api/userProfile", require('./services/users/routes/userRoutes'))
+app.use('/api/order', require('./services/orders/routes/orderRoutes'))
 app.listen(port, () => {
     console.log(`Server is running at ${port}`)
 });
