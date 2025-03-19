@@ -41,7 +41,9 @@ const orderSchema = new mongoose.Schema({
         enum: ['COD', 'Prepaid'],
         required: true
     },
-    transaction_id: { type: String }
+    transaction_id: { type: String },
+    // S3 bucket
+    images: [{ type: String, required: false }]
 }, { timestamps: true });
 
 module.exports = mongoose.model('Order', orderSchema);
