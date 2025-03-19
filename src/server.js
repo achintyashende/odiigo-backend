@@ -18,7 +18,7 @@ app.use("/api/userProfile", require('./odiigo-modules/users/routes/userRoutes'))
 app.use('/api/order', require('./odiigo-modules/orders/routes/orderRoutes'))
 app.use('/api/auth', require('./odiigo-modules/auth/routes/auth'));
 app.use('/api/pincode', require('./odiigo-modules/service-pincode/routes/pincodeRoutes'));
-
+app.use('/api/serviceBuddy', require('./odiigo-modules/service-buddies/routes/serviceBuddyRoutes'));
 
 
 // Connect to Redis
